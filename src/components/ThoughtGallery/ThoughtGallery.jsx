@@ -5,7 +5,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
-const ThoughtGallery = ({ thoughts }) => {
+const ThoughtGallery = ({ thoughts, handleDelete }) => {
     return (
         <CardDeck>
             { thoughts.length === 0 ?
@@ -31,6 +31,10 @@ const ThoughtGallery = ({ thoughts }) => {
                                 <Button 
                                     variant="outline-danger"
                                     size="sm"
+                                    onClick={ () => handleDelete({ 
+                                        type: "REMOVE_THOUGHT",
+                                        index: i,
+                                    })}
                                 >
                                     &#10006;
                                 </Button>

@@ -39,7 +39,6 @@ const ThoughtGallery = ({ thoughts, handleDelete }) => {
                                     &#10006;
                                 </Button>
                             </ButtonGroup>
-
                         </Card.Footer>
                     </Card>)
                 ))

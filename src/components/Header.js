@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="dark" variant="dark" className="mb-4">
         <Navbar.Brand href="#home">
         <img
             alt="gratitude logo"

@@ -9,7 +9,7 @@ const Header = () => (
             src="http://www.clker.com/cliparts/c/1/3/c/13601006691734787338gratitude-th.png"
             width="30"
             height="30"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top rounded-circle"
         />{' '}
             Gratefulness Journal
         </Navbar.Brand>

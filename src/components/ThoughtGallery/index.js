@@ -7,7 +7,7 @@ const mapStateToProps = ({ thoughts }) => ({ thoughts });
 // pass dispatch actions
 const mapDispatchToProps = dispatch => {
     return {
-        handleDelete: (value) => dispatch(value),
+        // removed delete down to card level
     }
 }
 

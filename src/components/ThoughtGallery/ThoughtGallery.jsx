@@ -1,12 +1,12 @@
 import React from 'react';
 import Alert from 'react-bootstrap/Alert'
-import CardDeck from 'react-bootstrap/CardDeck'
+import CardColumns from 'react-bootstrap/CardColumns'
 import ThoughtCard from '../ThoughtCard';
 import NewCard from '../NewCard';
 
 const ThoughtGallery = ({ thoughts }) => {
     return (
-        <CardDeck>
+        <CardColumns>
             { thoughts.length === 0 ?
                 <Alert variant="info">
                     There are no grateful thoughts yet!
@@ -16,7 +16,7 @@ const ThoughtGallery = ({ thoughts }) => {
                 ))
             }
             <NewCard />
-        </CardDeck>
+        </CardColumns>
     );
 }
 

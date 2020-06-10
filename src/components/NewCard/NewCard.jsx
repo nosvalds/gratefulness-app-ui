@@ -11,18 +11,30 @@ class NewCard extends Component {
             content: "",
             author: "",
         }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e,value) {
         this.setState({ [value]: e.currentTarget.value })
     }
-    
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.handleSubmit({...this.state});
+        this.setState({
+            content: "",
+            author: "",
+        })
+    }
+
     render() {
         const { content, author } = this.state;
 
         return (
             <Card>
-                <Form>
+                <Form onSubmit={ this.handleSubmit }>
                     <Card.Body>
                         <Form.Group controlId="thoughtForm.ControlTextarea1">
                             <Form.Control 

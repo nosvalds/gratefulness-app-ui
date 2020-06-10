@@ -5,3 +5,10 @@ export const newThought = ({ content, author }) => {
         author
     }
 }
+
+export const removeThought = ({ index }) => {
+    return {
+        type: "REMOVE_THOUGHT",
+        index,
+    }
+}

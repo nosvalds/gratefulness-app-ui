@@ -23,10 +23,7 @@ const ThoughtCard = ( {index, thought, handleDelete }) => (
                 <Button 
                     variant="outline-danger"
                     size="sm"
-                    onClick={ () => handleDelete({ 
-                        type: "REMOVE_THOUGHT",
-                        index: index,
-                    })}
+                    onClick={ () => handleDelete({ index })}
                     aria-label="delete"
                 >
                     &#10006;

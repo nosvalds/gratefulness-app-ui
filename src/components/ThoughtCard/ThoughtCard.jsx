@@ -2,6 +2,9 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
     <Card>
@@ -19,7 +22,7 @@ const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
                     aria-label="edit"
                     onClick={ () => handleEditIndex({ index })}
                 >
-                    Edit
+                    <FontAwesomeIcon icon={faEdit} />
                 </Button>
                 <Button 
                     variant="outline-danger"
@@ -27,7 +30,7 @@ const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
                     onClick={ () => handleDelete({ index })}
                     aria-label="delete"
                 >
-                    &#10006;
+                    <FontAwesomeIcon icon={faTrashAlt} />
                 </Button>
             </ButtonGroup>
         </Card.Footer>

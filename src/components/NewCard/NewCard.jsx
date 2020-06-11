@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave, faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 
 class NewCard extends Component {
     constructor(props) {
@@ -40,7 +42,7 @@ class NewCard extends Component {
     render() {
         const { content, author } = this.state;
         const { edit } = this.props;
-        
+
         return (
             <Card>
                 <Form onSubmit={ this.handleSubmit }>
@@ -71,13 +73,15 @@ class NewCard extends Component {
                             />
                         </Form.Group>
                         <Button 
-                            variant="outline-success"
+                            variant="outline-info"
                             size="sm"
                             type="submit"
                             className="ml-2 font-weight-bold"
                             aria-label="add or save"
                         >
-                            {edit ? "S" : "&#65291;"}
+                            { edit ? 
+                                <FontAwesomeIcon icon={faSave} /> : 
+                                <FontAwesomeIcon icon={faPlusSquare} /> }
                         </Button>
                     </Card.Footer>
                 </Form>

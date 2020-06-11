@@ -2,19 +2,33 @@ const initial = {
     thoughts: [
         {
             content: "lorem ipsum dolor funnor, was the grateful man of the hour",
-            author: "Bill"
+            author: "Bill",
+            edit: false,
+        },
+        {
+            content: "lorem ipsum dolor funnor, was the grateful man of the hour, lorem ipsum dolor funnor, was the grateful man of the hour, lorem ipsum dolor funnor, was the grateful man of the hour",
+            author: "Tom",
+            edit: false,
         },
         {
             content: "lorem ipsum dolor funnor, was the grateful man of the hour",
-            author: "Tom"
+            author: "Bob",
+            edit: false,
         },
         {
-            content: "lorem ipsum dolor funnor, was the grateful man of the hour",
-            author: "Bob"
+            content: "lorem ipsum dolor funnor, was the grateful man of the hour, lorem ipsum dolor funnor, was the grateful man of the hour",
+            author: "Billy",
+            edit: false,
         },
         {
-            content: "lorem ipsum dolor funnor, was the grateful man of the hour",
-            author: "Cobb"
+            content: "lorem ipsum dolor funnor, was the grateful man of the hour, lorem ipsum dolor funnor, was the grateful man of the hour",
+            author: "Anonymous",
+            edit: false,
+        },
+        {
+            content: "lorem ipsum dolor funnor, was the grateful man of the hour, lorem ipsum dolor funnor, was the grateful man of the hour",
+            author: "Anonymous",
+            edit: false,
         },
     ],
 };

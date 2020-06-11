@@ -12,3 +12,19 @@ export const removeThought = ({ index }) => {
         index,
     }
 }
+
+export const updateThought = ({ content, author, index }) => {
+    return {
+        type: "UPDATE_THOUGHT",
+        index,
+        author,
+        content
+    }
+}
+
+export const setEditIndex = ({ index }) => {
+    return {
+        type: "EDIT_INDEX",
+        editIndex: index
+    }
+}

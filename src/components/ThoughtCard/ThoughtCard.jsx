@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
-const ThoughtCard = ( {index, thought, handleDelete }) => (
+const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
     <Card>
         <Card.Body>
             <Card.Text>
@@ -17,6 +17,7 @@ const ThoughtCard = ( {index, thought, handleDelete }) => (
                     variant="outline-secondary"
                     size="sm"
                     aria-label="edit"
+                    onClick={ () => handleEditIndex({ index })}
                 >
                     Edit
                 </Button>

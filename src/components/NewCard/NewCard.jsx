@@ -6,10 +6,10 @@ import Form from 'react-bootstrap/Form'
 class NewCard extends Component {
     constructor(props) {
         super(props);
-
+        const { edit, thought } = this.props
         this.state = {
-            content: "",
-            author: "",
+            content: edit ? thought.content : "",
+            author: edit ? thought.author : "",
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -21,17 +21,26 @@ class NewCard extends Component {
     }
 
     handleSubmit(e) {
+        const { edit, index } = this.props;
         e.preventDefault();
-        this.props.handleSubmit({...this.state});
-        this.setState({
-            content: "",
-            author: "",
-        })
+        if (edit) { // if we're in edit mode call a different function, pass current state and index up
+            this.props.handleUpdate({
+                ...this.state,
+                index
+            })
+        } else { // if we're in new mode, handle submit (new card), send state and then clear the form
+            this.props.handleSubmit({...this.state});
+            this.setState({
+                content: "",
+                author: "",
+            })
+        }
     }
 
     render() {
         const { content, author } = this.state;
-
+        const { edit } = this.props;
+        
         return (
             <Card>
                 <Form onSubmit={ this.handleSubmit }>
@@ -66,9 +75,9 @@ class NewCard extends Component {
                             size="sm"
                             type="submit"
                             className="ml-2 font-weight-bold"
-                            aria-label="add"
+                            aria-label="add or save"
                         >
-                            &#65291;
+                            {edit ? "S" : "&#65291;"}
                         </Button>
                     </Card.Footer>
                 </Form>

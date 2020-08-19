@@ -22,7 +22,7 @@ const Header = ({ handleRefresh }) => (
         </Navbar.Brand>
         <Button 
             variant="success"
-            onClick={ handleRefresh }
+            onClick={ () => handleRefresh() }
         >
             Refresh
         </Button>

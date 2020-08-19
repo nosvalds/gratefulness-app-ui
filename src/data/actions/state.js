@@ -35,3 +35,9 @@ export const loadThoughts = (thoughts) => {
         thoughts,
     }
 }
+
+export const startRefresh = () => {
+    return {
+        type: "REFRESH",
+    }
+}

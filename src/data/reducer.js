@@ -63,6 +63,7 @@ const reducer = (state, action) => {
         case "UPDATE_THOUGHT": return updateThought(state, action);
         case "EDIT_INDEX": return editThought(state, action);
         case "LOAD_THOUGHTS": return loadThoughts(state, action);
+        case "REFRESH": return { thoughtsLoaded: false };
         default: return state;
     }
 }

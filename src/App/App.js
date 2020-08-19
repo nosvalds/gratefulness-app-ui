@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 
 import Container from 'react-bootstrap/Container'
-import Header from '../components/Header';
+import Header from '../components/Header/';
 import ThoughtGallery from '../components/ThoughtGallery/';
 import Loading from '../components/Loading/';
 

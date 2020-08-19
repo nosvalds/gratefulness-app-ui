@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import NewCard from './NewCard';
-import { newThought, removeThought, updateThought } from '../../data/actions/state'
+import { removeThought, updateThought } from '../../data/actions/state'
+import { postThought } from '../../data/actions/api'
 
 // pass dispatch actions
 const mapDispatchToProps = dispatch => {
     return {
+        handleSubmit: (data) => dispatch(postThought(data)),
         handleDelete: (data) => dispatch(removeThought(data)),
-        handleSubmit: (data) => dispatch(newThought(data)),
         handleUpdate: (data) => dispatch(updateThought(data))
     }
 }

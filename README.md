@@ -12,10 +12,10 @@
 ### To Do
 - [x] Axios set up
 - [x] Initial page load - query DB API and load Thoughts (GET)
-- [ ] change new thought box to be at top (reduce scrolling) 
-- [ ] New Thought 
-    - [ ] POST new Thought to API
-    - [ ] Add new Thought to state
+- [x] change new thought box to be at top (reduce scrolling) 
+- [x] New Thought 
+    - [x] POST new Thought to API
+    - [x] Add new Thought to state
 - [ ] Editing a Thought
     - [ ] Update state to edit mode
     - [ ] PATCH Thought changes to API
@@ -25,6 +25,8 @@
     - [ ] Delete Thought in state
 - [ ] Refresh button
   - Clicking refresh button re-loads page for any new thoughts added by other users in the database through the API
+- [ ] Advanced error handling?
+  - https://www.intricatecloud.io/2020/03/how-to-handle-api-errors-in-your-web-app-using-axios/
 
 # Create React App Documentation
 

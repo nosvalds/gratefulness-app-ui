@@ -1,5 +1,5 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import persistState from "redux-localstorage";
+//import persistState from "redux-localstorage";
 
 import initial from './initial';
 import reducer from './reducer';
@@ -16,7 +16,7 @@ import thunk from "redux-thunk";
     initial,
     composeEnhancers(
       applyMiddleware(thunk),
-      persistState()
+      //persistState()
     )
   );
   

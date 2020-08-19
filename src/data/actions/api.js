@@ -1,5 +1,5 @@
 import axios from '../../axios/axios';
-import { loadThoughts, newThought } from '../actions/state';
+import { loadThoughts, newThought, updateThought } from '../actions/state';
 
 export const getThoughts = () => {
     return (dispatch) => {
@@ -10,7 +10,7 @@ export const getThoughts = () => {
             dispatch(loadThoughts(result));
         })
         .catch((err) => {
-                console.log("Error in GET thoughts from from database. Not able to retrieve thoughts", err)
+                console.log("Not able to retrieve thoughts. Error in GET request to database.", err)
             }
         );
     };
@@ -25,7 +25,26 @@ export const postThought = (thought) => {
         })
         // basic error handling
         .catch((err) => {
-                console.log("Error in POST thought to database. Not able to save thought", err)
+                console.log("Not able to save thought. Error in POST thought to database.", err)
+            }
+        );
+    };
+}
+
+export const putThought = ({ id, content, author, index }) => {
+    return (dispatch) => {
+        // now use axios to make an API request
+        axios.put(`/${id}`, {
+            content,
+            author, 
+        }).then(({ data }) => {
+            // once we have a successful POST, update state with the thought
+            data.index = index; // add index for updateThought
+            dispatch(updateThought(data));
+        })
+        // basic error handling
+        .catch((err) => {
+                console.log("Not able to save thought. Error in PUT thought to database.", err)
             }
         );
     };

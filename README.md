@@ -16,10 +16,10 @@
 - [x] New Thought 
     - [x] POST new Thought to API
     - [x] Add new Thought to state
-- [ ] Editing a Thought
-    - [ ] Update state to edit mode
-    - [ ] PATCH Thought changes to API
-    - [ ] Update state with changes to Thought
+- [x] Editing a Thought
+    - [x] Update state to edit mode (no changes)
+    - [x] PUT Thought changes to API
+    - [x] Update state with changes to Thought
 - [ ] Deleting a Thought
     - [ ] DELETE Thought through API
     - [ ] Delete Thought in state

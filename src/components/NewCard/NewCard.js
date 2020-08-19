@@ -23,11 +23,12 @@ class NewCard extends Component {
     }
 
     handleSubmit(e) {
-        const { edit, index } = this.props;
+        const { edit, index, thought } = this.props;
         e.preventDefault();
         if (edit) { // if we're in edit mode call a different function, pass current state and index up
             this.props.handleUpdate({
                 ...this.state,
+                id: thought.id, // pass id now for API
                 index
             })
         } else { // if we're in new mode, handle submit (new card), send state and then clear the form

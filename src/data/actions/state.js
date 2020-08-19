@@ -28,3 +28,10 @@ export const setEditIndex = ({ index }) => {
         editIndex: index
     }
 }
+
+export const loadThoughts = (thoughts) => {
+    return {
+        type: "LOAD_THOUGHTS",
+        thoughts,
+    }
+}

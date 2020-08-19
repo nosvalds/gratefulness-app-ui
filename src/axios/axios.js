@@ -1,0 +1,11 @@
+import axios from 'axios';
+
+export default axios.create({
+  baseURL: (process.env.NODE_ENV === 'production') ? 
+    "TBD" // production url
+    : "http://gratefulness.test/api/thoughts", // url from vagrant/homestead virtual machine for development
+  headers: {
+    Accept: "application/json",
+    Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiMmQ2NGFmNWU1ZDQ0MjlhYjM5YmExMWIyMjE3NmQzNDYxMWIxZTRkMzY5ZTU4MGVlOGNjYjFiNTU1Njc5MGM1ZjM5MDJkZDM2MzgwYWVlZjciLCJpYXQiOjE1OTczMDc5MjEsIm5iZiI6MTU5NzMwNzkyMSwiZXhwIjoxNjI4ODQzOTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.LsJT-EijcoISD89UpY129YTFWckhKvmvbXly30GkI_ZP4Zb_aq3gDUOS-LFGBIUQDFoxbszCHhNMF4yoNMT55uOaliOsAOrXiDG0q4akylGuDw9KftYz1Gi_5n-kIVDYgft4FM3ejS3QI7-X94vxCJ0Xy1NcZfSr8i56LmbGDTD1G6dA5OtLpVkUQBWe0LY-AnHIkDJyvC6A1DCnM4UFpcMTgowW3O2FABCYwYQB5IZFF49JVQ3tUaX57gnJ0WCyQqz4foo_2QJb-_IY7B9WuNVeZZ9xVEjnKEtJTceDGLoqHohV3rXYCsJXZKSdhTsPM7MSVotTpyWca3JnycHQ3pwsnf7dFxtp-J637N-OOp5OFkWVfUlcHPxg5WWxjBjUAVC8bvy6lLl1srFmehUP_XuQ2EpTW5WTexXCmmYey5-4LjtiFQ_hZnG4vwgTFAPbHAJWBPbaWkWX-ca2dFlQYLMvvibLv_f_Fb645Cejh7CwM4Gb7Rg6d9saGP279FSzFaYZrQevo2DnbiUf0yXfpcr-Tu4smElK3DKgOt81LhipG_7xRIKeV3GelnOT85g22SNveijK9--ngv_ExVQbC105yV0dtxH2NbA8hcbAT3wVNNwMJI7tJkBwuTVe-7nM7Pvs-sBEAHmjed3OpUoDmMIib0aGQf9NXr2PrhpRciw"
+  }
+})

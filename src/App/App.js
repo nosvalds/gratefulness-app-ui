@@ -4,13 +4,17 @@ import '../App.css';
 import Container from 'react-bootstrap/Container'
 import Header from '../components/Header';
 import ThoughtGallery from '../components/ThoughtGallery/';
+import Loading from '../components/Loading/';
 
 
 function App() {
   return (
     <Container fluid>
       <Header />
-      <ThoughtGallery />
+      {/* wrap with Loading component so user sees loading spinner while waiting for response from the API */}
+      <Loading >
+        <ThoughtGallery />
+      </Loading>
     </Container>
   );
 }

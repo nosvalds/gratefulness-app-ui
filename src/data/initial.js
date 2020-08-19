@@ -1,4 +1,5 @@
 const initial = {
+    thoughtsLoaded: false,
     thoughts: [
         {
             content: "lorem ipsum dolor funnor, was the grateful man of the hour",

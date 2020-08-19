@@ -46,12 +46,22 @@ export const editThought = (state, { editIndex }) => {
     };
 }
 
+// accepts an array of thought objects 
+export const loadThoughts = (state, { thoughts }) => {
+    return {
+        ...state,
+        thoughts: thoughts,
+        thoughtsLoaded: true
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "NEW_THOUGHT": return addThought(state, action);
         case "REMOVE_THOUGHT": return removeThought(state, action);
         case "UPDATE_THOUGHT": return updateThought(state, action);
         case "EDIT_INDEX": return editThought(state, action);
+        case "LOAD_THOUGHTS": return loadThoughts(state, action);
         default: return state;
     }
 }

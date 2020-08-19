@@ -23,8 +23,10 @@
 - [x] Deleting a Thought
     - [x] DELETE Thought through API
     - [x] Delete Thought in state
-- [ ] Refresh button
+- [x] Refresh button
   - Clicking refresh button re-loads page for any new thoughts added by other users in the database through the API
+
+## Functionality Ideas
 - [ ] Advanced error handling?
   - https://www.intricatecloud.io/2020/03/how-to-handle-api-errors-in-your-web-app-using-axios/
 - [ ] Load/Render more thoughts as you scroll down the page

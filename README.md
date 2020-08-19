@@ -20,9 +20,9 @@
     - [x] Update state to edit mode (no changes)
     - [x] PUT Thought changes to API
     - [x] Update state with changes to Thought
-- [ ] Deleting a Thought
-    - [ ] DELETE Thought through API
-    - [ ] Delete Thought in state
+- [x] Deleting a Thought
+    - [x] DELETE Thought through API
+    - [x] Delete Thought in state
 - [ ] Refresh button
   - Clicking refresh button re-loads page for any new thoughts added by other users in the database through the API
 - [ ] Advanced error handling?

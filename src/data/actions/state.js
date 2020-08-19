@@ -6,7 +6,7 @@ export const newThought = ({ content, author }) => {
     }
 }
 
-export const removeThought = ({ index }) => {
+export const removeThought = (index) => {
     return {
         type: "REMOVE_THOUGHT",
         index,

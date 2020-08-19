@@ -1,5 +1,5 @@
 import axios from '../../axios/axios';
-import { loadThoughts, newThought, updateThought } from '../actions/state';
+import { loadThoughts, newThought, updateThought, removeThought } from '../actions/state';
 
 export const getThoughts = () => {
     return (dispatch) => {
@@ -38,13 +38,28 @@ export const putThought = ({ id, content, author, index }) => {
             content,
             author, 
         }).then(({ data }) => {
-            // once we have a successful POST, update state with the thought
+            // once we have a successful PUT, update state with the thought
             data.index = index; // add index for updateThought
             dispatch(updateThought(data));
         })
         // basic error handling
         .catch((err) => {
                 console.log("Not able to save thought. Error in PUT thought to database.", err)
+            }
+        );
+    };
+}
+
+export const deleteThought = ({ id,  index }) => {
+    return (dispatch) => {
+        // now use axios to make an API request
+        axios.delete(`/${id}`).then(() => {
+            // once we have a successful DELETE, update state to remove the thought
+            dispatch(removeThought(index));
+        })
+        // basic error handling
+        .catch((err) => {
+                console.log("Not able to save thought. Error in DELETE thought request to database.", err)
             }
         );
     };

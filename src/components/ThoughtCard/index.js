@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import ThoughtCard from './ThoughtCard';
-import { removeThought, setEditIndex } from '../../data/actions/state';
+import { setEditIndex } from '../../data/actions/state';
+import { deleteThought } from '../../data/actions/api';
 
 // pass dispatch actions
 const mapDispatchToProps = dispatch => {
     return {
-        handleDelete: (data) => dispatch(removeThought(data)),
+        handleDelete: (data) => dispatch(deleteThought(data)),
         handleEditIndex: (data) => dispatch(setEditIndex(data))
     }
 }

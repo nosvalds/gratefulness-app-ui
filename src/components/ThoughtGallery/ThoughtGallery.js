@@ -8,6 +8,7 @@ const ThoughtGallery = ({ thoughts }) => {
 
     return (
         <CardColumns>
+            <NewCard edit={ false }/>
             { thoughts.length === 0 ?
                 <Alert variant="info">
                     There are no grateful thoughts yet!
@@ -31,7 +32,6 @@ const ThoughtGallery = ({ thoughts }) => {
                     })}
                 </>
             }
-            <NewCard edit={ false }/>
         </CardColumns>
     );
 }

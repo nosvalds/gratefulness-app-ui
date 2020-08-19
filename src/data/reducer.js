@@ -1,12 +1,13 @@
 export const addThought = (state, { content, author }) => {
     return {
         ...state,
-        thoughts: [...state.thoughts,
+        thoughts: [
             { 
                 content: content, 
                 author: author, 
                 edit: false
             } // add a thought with content and an author
+            ,...state.thoughts
         ]
     };
 };

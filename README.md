@@ -10,8 +10,9 @@
 - Thoughts will persist across browsers, sessions, users as they will be stored in the Laravel database using API requests from the frontend
 
 ### To Do
-- [ ] Axios set up
-- [ ] Initial page load - query DB API and load Thoughts (GET)
+- [x] Axios set up
+- [x] Initial page load - query DB API and load Thoughts (GET)
+- [ ] change new thought box to be at top (reduce scrolling) 
 - [ ] New Thought 
     - [ ] POST new Thought to API
     - [ ] Add new Thought to state

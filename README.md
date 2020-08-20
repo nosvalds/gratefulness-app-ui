@@ -5,11 +5,11 @@
 - Is only a React Frontend with Redux state management and localstorage. So grateful thoughts are stored in the browser session and may not persist between browsers or if cache is cleared.
 
 ## v2.0 - Connect with Laravel API Backend
-### Goals
+### Functionality
 - Allows user to enter, edit, and delete their grateful thoughts. 
 - Thoughts will persist across browsers, sessions, users as they will be stored in the Laravel database using API requests from the frontend
 
-### To Do
+### Work Plan
 - [x] Axios set up
 - [x] Initial page load - query DB API and load Thoughts (GET)
 - [x] change new thought box to be at top (reduce scrolling) 
@@ -26,10 +26,42 @@
 - [x] Refresh button
   - Clicking refresh button re-loads page for any new thoughts added by other users in the database through the API
 
-## Functionality Ideas
+## v2.1 - Add a word cloud
+### Functionality
+- Add a wordcloud using react-wordcloud so people can see the things others are most grateful for. 
+
+### Work Plan
+- [x] Create the array of word frequencies from the grateful thoughts
+  - The react-wordcloud component requires an array input that is structured like so
+```js
+[
+    { text: 'people', value: 4 },
+    { text: 'powers', value: 2 },
+    { text: 'time', value: 2 },
+    { text: 'free', value: 2 },
+]
+```
+  - [x] Use borrowed code from @chrisrzhou/wordcloud-generator to create this structure with the grateful thoughts when they're loaded from the API backend and then store it in state, this is done in ```reducer.js``` with the help of ```nlp.js``.
+
+- [x] Add in the react-wordcloud component above the grateful thought gallery
+    - This was tricky getting the loading sequence right to pass the ```words``` into the wordcloud React component at the right time. I had to make my own React component that is passed the ```words``` array from state using react-redux and then passes it to the wordcloud React component.
+    - Used hooks to resize the wordcloud
+
+## v2.2 - Re-name, the why, Instructions
+### Functionality
+- Renaming and adding the why/instructions on how folks should use the site
+
+### Work Plan
+- [ ] - Re-name now that we have the word cloud
+- [ ] - Add instructions on how to use the website
+  - The idea is for this to be open to the public to add a grateful thought and see the wordcloud grow over time
+  - Add the "why" behind grateful thoughts/gratefullness journaling 
+
+## Future Ideas
 - [ ] Advanced error handling?
   - https://www.intricatecloud.io/2020/03/how-to-handle-api-errors-in-your-web-app-using-axios/
 - [ ] Load/Render more thoughts as you scroll down the page
+- [ ] Limit # of thoughts loaded, potentially make it random?
 
 # Create React App Documentation
 

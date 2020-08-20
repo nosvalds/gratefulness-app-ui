@@ -6,7 +6,7 @@ const Header = ({ handleRefresh }) => (
     <Navbar 
         bg="dark" 
         variant="dark" 
-        className="mb-4 d-flex justify-content-between"
+        className="d-flex justify-content-between"
     >
         <Navbar.Brand 
             href="#home"

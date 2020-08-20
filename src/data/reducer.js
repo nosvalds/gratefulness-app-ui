@@ -1,3 +1,5 @@
+import { tokenizeWords, mergeTokens } from './nlp';
+
 export const addThought = (state, { content, author }) => {
     return {
         ...state,
@@ -56,13 +58,33 @@ export const loadThoughts = (state, { thoughts }) => {
     }
 }
 
+// tokenize words for wordcloud
+export const tokenWordsOnLoad = (state, { thoughts }) => {
+    let target = [];
+    const contentSettings = {
+            allowNumbers: false,
+            maxWords: 100,
+            stemmer: null,
+            stopwordsInput: '',
+        }
+    thoughts.forEach((thought) => {
+        let source = tokenizeWords(thought.content, contentSettings);
+        target = mergeTokens(source, target, "text", "value");
+    })
+
+    return {
+        ...state,
+        wordTokens: target
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "NEW_THOUGHT": return addThought(state, action);
         case "REMOVE_THOUGHT": return removeThought(state, action);
         case "UPDATE_THOUGHT": return updateThought(state, action);
         case "EDIT_INDEX": return editThought(state, action);
-        case "LOAD_THOUGHTS": return loadThoughts(state, action);
+        case "LOAD_THOUGHTS": return loadThoughts(tokenWordsOnLoad(state, action), action);
         case "REFRESH": return { thoughtsLoaded: false };
         default: return state;
     }

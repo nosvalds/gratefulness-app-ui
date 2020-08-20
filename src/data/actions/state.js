@@ -6,7 +6,7 @@ export const newThought = ({ content, author }) => {
     }
 }
 
-export const removeThought = ({ index }) => {
+export const removeThought = (index) => {
     return {
         type: "REMOVE_THOUGHT",
         index,
@@ -26,5 +26,18 @@ export const setEditIndex = ({ index }) => {
     return {
         type: "EDIT_INDEX",
         editIndex: index
+    }
+}
+
+export const loadThoughts = (thoughts) => {
+    return {
+        type: "LOAD_THOUGHTS",
+        thoughts,
+    }
+}
+
+export const startRefresh = () => {
+    return {
+        type: "REFRESH",
     }
 }

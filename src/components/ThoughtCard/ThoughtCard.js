@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
+const ThoughtCard = ({ index, thought, handleDelete, handleEditIndex }) => (
     <Card>
         <Card.Body>
             <Card.Text>
@@ -27,7 +27,10 @@ const ThoughtCard = ( {index, thought, handleDelete, handleEditIndex }) => (
                 <Button 
                     variant="outline-danger"
                     size="sm"
-                    onClick={ () => handleDelete({ index })}
+                    onClick={ () => handleDelete({
+                        index, 
+                        id: thought.id
+                     })}
                     aria-label="delete"
                 >
                     <FontAwesomeIcon icon={faTrashAlt} />

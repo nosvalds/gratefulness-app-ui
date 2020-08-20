@@ -1,3 +1,38 @@
+# Gratefulness App UI
+
+## v1.0 - Frontend with Localstorage
+- Allows user to enter, edit, and delete their grateful thoughts. 
+- Is only a React Frontend with Redux state management and localstorage. So grateful thoughts are stored in the browser session and may not persist between browsers or if cache is cleared.
+
+## v2.0 - Connect with Laravel API Backend
+### Goals
+- Allows user to enter, edit, and delete their grateful thoughts. 
+- Thoughts will persist across browsers, sessions, users as they will be stored in the Laravel database using API requests from the frontend
+
+### To Do
+- [x] Axios set up
+- [x] Initial page load - query DB API and load Thoughts (GET)
+- [x] change new thought box to be at top (reduce scrolling) 
+- [x] New Thought 
+    - [x] POST new Thought to API
+    - [x] Add new Thought to state
+- [x] Editing a Thought
+    - [x] Update state to edit mode (no changes)
+    - [x] PUT Thought changes to API
+    - [x] Update state with changes to Thought
+- [x] Deleting a Thought
+    - [x] DELETE Thought through API
+    - [x] Delete Thought in state
+- [x] Refresh button
+  - Clicking refresh button re-loads page for any new thoughts added by other users in the database through the API
+
+## Functionality Ideas
+- [ ] Advanced error handling?
+  - https://www.intricatecloud.io/2020/03/how-to-handle-api-errors-in-your-web-app-using-axios/
+- [ ] Load/Render more thoughts as you scroll down the page
+
+# Create React App Documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

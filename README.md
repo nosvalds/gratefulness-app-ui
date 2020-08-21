@@ -52,8 +52,8 @@
 - Renaming and adding the why/instructions on how folks should use the site
 
 ### Work Plan
-- [ ] - Re-name now that we have the word cloud
-- [ ] - Add instructions on how to use the website
+- [x] - Re-name now that we have the word cloud
+- [x] - Add instructions on how to use the website
   - The idea is for this to be open to the public to add a grateful thought and see the wordcloud grow over time
   - Add the "why" behind grateful thoughts/gratefullness journaling 
 

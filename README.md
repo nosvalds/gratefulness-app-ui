@@ -62,7 +62,8 @@
  - Display more thoughts with button at the bottom of the page
 
 ### Work Plan
-- [ ] Display more thoughts with button at the bottom of the page
+- [x] Display more thoughts with button at the bottom of the page
+
 
 ## Future Ideas
 - [ ] Advanced error handling?

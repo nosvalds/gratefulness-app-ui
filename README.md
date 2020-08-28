@@ -57,10 +57,16 @@
   - The idea is for this to be open to the public to add a grateful thought and see the wordcloud grow over time
   - Add the "why" behind grateful thoughts/gratefullness journaling 
 
+## v2.3 - Loading
+### Functionality
+ - Load/Render more thoughts as you scroll down the page
+
+### Work Plan
+- [ ] Load/Render more thoughts as you scroll down the page
+
 ## Future Ideas
 - [ ] Advanced error handling?
   - https://www.intricatecloud.io/2020/03/how-to-handle-api-errors-in-your-web-app-using-axios/
-- [ ] Load/Render more thoughts as you scroll down the page
 - [ ] Limit # of thoughts loaded, potentially make it random?
 
 # Create React App Documentation

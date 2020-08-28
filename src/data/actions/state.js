@@ -41,3 +41,9 @@ export const startRefresh = () => {
         type: "REFRESH",
     }
 }
+
+export const displayMore = () => {
+    return {
+        type: "DISPLAY_MORE",
+    }
+}

@@ -1,7 +1,11 @@
 import React from 'react';
 import '../App.css';
 
+// Prebuilt
 import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
+
+// components
 import Header from '../components/Header/';
 import Description from '../components/Description';
 import WordCloud from '../components/WordCloud';
@@ -10,7 +14,9 @@ import Loading from '../components/Loading/';
 import Footer from '../components/Footer';
 
 
-function App() {
+
+const App = ({ handleClick, allDisplayed }) => {
+
   return (
     <Container fluid>
       <Header />
@@ -19,6 +25,16 @@ function App() {
       <Loading >
         <WordCloud />
         <ThoughtGallery />
+        { !allDisplayed ?
+          <div className="d-flex justify-content-center mb-2">
+          <Button 
+            onClick={ () => handleClick() } 
+          >
+            Load More...
+          </Button>
+        </div>
+        : null
+        }
       </Loading>
       <Footer/>
     </Container>

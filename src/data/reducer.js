@@ -78,6 +78,20 @@ export const tokenWordsOnLoad = (state, { thoughts }) => {
     }
 }
 
+export const displayMore = (state) => {
+    let thoughtsDisplayed = state.thoughtsDisplayed;
+    let totalThoughts = state.thoughts.length;
+    if (thoughtsDisplayed + 5 > totalThoughts) {
+        thoughtsDisplayed = totalThoughts;
+    } else {
+        thoughtsDisplayed += 5;
+    }
+    return {
+        ...state,
+        thoughtsDisplayed
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "NEW_THOUGHT": return addThought(state, action);
@@ -85,6 +99,7 @@ const reducer = (state, action) => {
         case "UPDATE_THOUGHT": return updateThought(state, action);
         case "EDIT_INDEX": return editThought(state, action);
         case "LOAD_THOUGHTS": return loadThoughts(tokenWordsOnLoad(state, action), action);
+        case "DISPLAY_MORE": return displayMore(state);
         case "REFRESH": return { thoughtsLoaded: false };
         default: return state;
     }

@@ -1,9 +1,18 @@
 import { connect } from 'react-redux';
 import App from './App';
 
-const mapStateToProps = ({ wordTokens, thoughtsLoaded }) => ({ 
-    words: wordTokens, 
-    loaded: thoughtsLoaded 
-})
+import { displayMore } from '../data/actions/state'
 
-export default connect(mapStateToProps)(App);
+const mapStateToProps = ({ thoughts, thoughtsDisplayed }) => {
+    return {
+        allDisplayed: thoughts.length === thoughtsDisplayed
+    }
+}
+// pass dispatch actions
+const mapDispatchToProps = dispatch => {
+    return {
+        handleClick: () => dispatch(displayMore()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

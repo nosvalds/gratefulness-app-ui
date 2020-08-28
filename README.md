@@ -59,10 +59,10 @@
 
 ## v2.3 - Loading
 ### Functionality
- - Load/Render more thoughts as you scroll down the page
+ - Display more thoughts with button at the bottom of the page
 
 ### Work Plan
-- [ ] Load/Render more thoughts as you scroll down the page
+- [ ] Display more thoughts with button at the bottom of the page
 
 ## Future Ideas
 - [ ] Advanced error handling?

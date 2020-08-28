@@ -7,9 +7,11 @@ const Header = ({ handleRefresh }) => (
         bg="dark" 
         variant="dark" 
         className="d-flex justify-content-between"
+        id="top"
     >
         <Navbar.Brand 
-            href="#home"
+            href="/"
+            className="d-flex align-items-center"
         >
             <img
                 alt="gratitude logo"
@@ -17,8 +19,8 @@ const Header = ({ handleRefresh }) => (
                 width="30"
                 height="30"
                 className="d-inline-block align-top rounded-circle mr-2"
-            />{' '}
-                Gratefulness Journal
+            />
+            <h1 className="ml-2">Grateful Thoughts Word Cloud</h1>
         </Navbar.Brand>
         <Button 
             variant="success"

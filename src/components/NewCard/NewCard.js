@@ -53,7 +53,7 @@ class NewCard extends Component {
                                 aria-label="Grateful Thought" 
                                 as="textarea" 
                                 rows="5" 
-                                placeholder="I'm grateful for..."
+                                placeholder="I am grateful for...   , because...    "
                                 value={ content }
                                 onChange={ (e) => this.handleChange(e,"content") }
                             />
